@@ -10,6 +10,8 @@
 
 @interface ListStoryByCategoryType ()
 
+@property (nonatomic, retain) NSArray * arr;
+
 @end
 
 @implementation ListStoryByCategoryType
@@ -22,6 +24,20 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSLog(@"Entered listby category");
+    
+    _arr = [[NSMutableArray alloc] initWithObjects:@"story1",@"story2",@"story3", @"story4", nil];
+    /*
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"StoryBook" inManagedObjectContext:app.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSError *err = nil;
+    _arr = [app.managedObjectContext executeFetchRequest:fetchRequest error:&err];*/
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,24 +50,25 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [_arr count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID" forIndexPath:indexPath];
     
     // Configure the cell...
+ [[cell textLabel] setText:[_arr objectAtIndex:indexPath.row]];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

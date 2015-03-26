@@ -10,6 +10,8 @@
 
 @interface ListStoryLine ()
 
+@property (nonatomic, retain) NSMutableArray * arr;
+
 @end
 
 @implementation ListStoryLine
@@ -22,6 +24,9 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSLog(@"Entered listby category");
+    
+    _arr = [[NSMutableArray alloc] initWithObjects:@"storyline1",@"storyline2",@"storyline3", @"storyline4", nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,24 +39,25 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [_arr count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID" forIndexPath:indexPath];
     
     // Configure the cell...
+ [[cell textLabel] setText:[_arr objectAtIndex:indexPath.row]];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

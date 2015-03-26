@@ -14,8 +14,6 @@
 		CA880F581AC367EA00ADF404 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA880F571AC367EA00ADF404 /* Images.xcassets */; };
 		CA880F5B1AC367EA00ADF404 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA880F591AC367EA00ADF404 /* LaunchScreen.xib */; };
 		CA880F671AC367EA00ADF404 /* tweetStoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA880F661AC367EA00ADF404 /* tweetStoryTests.m */; };
-		CAA327CA1AC393BC00E71815 /* Storyline.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA327C91AC393BC00E71815 /* Storyline.m */; };
-		CAA327CD1AC393BC00E71815 /* StoryBook.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA327CC1AC393BC00E71815 /* StoryBook.m */; };
 		CAA327CF1AC39D2C00E71815 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA327CE1AC39D2C00E71815 /* MapKit.framework */; };
 		CAA327D11AC39D3500E71815 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA327D01AC39D3500E71815 /* WebKit.framework */; };
 		CAA327D31AC39D3D00E71815 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA327D21AC39D3D00E71815 /* Social.framework */; };
@@ -26,6 +24,9 @@
 		CAA327E91AC3A00800E71815 /* StoryLineDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA327E81AC3A00800E71815 /* StoryLineDetail.m */; };
 		CAA327EC1AC3A07C00E71815 /* StoryCreate&Add.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA327EB1AC3A07C00E71815 /* StoryCreate&Add.m */; };
 		CAA327EF1AC3A15D00E71815 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA327EE1AC3A15D00E71815 /* MapViewController.m */; };
+		CAA327FE1AC3A8A400E71815 /* Storyline.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA327FD1AC3A8A400E71815 /* Storyline.m */; };
+		CAA328011AC3A8A500E71815 /* StoryBook.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA328001AC3A8A500E71815 /* StoryBook.m */; };
+		CAA328041AC3C75C00E71815 /* StoryAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA328031AC3C75C00E71815 /* StoryAdd.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,10 +52,6 @@
 		CA880F601AC367EA00ADF404 /* tweetStoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tweetStoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA880F651AC367EA00ADF404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA880F661AC367EA00ADF404 /* tweetStoryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tweetStoryTests.m; sourceTree = "<group>"; };
-		CAA327C81AC393BC00E71815 /* Storyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Storyline.h; sourceTree = "<group>"; };
-		CAA327C91AC393BC00E71815 /* Storyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Storyline.m; sourceTree = "<group>"; };
-		CAA327CB1AC393BC00E71815 /* StoryBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryBook.h; sourceTree = "<group>"; };
-		CAA327CC1AC393BC00E71815 /* StoryBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryBook.m; sourceTree = "<group>"; };
 		CAA327CE1AC39D2C00E71815 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CAA327D01AC39D3500E71815 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		CAA327D21AC39D3D00E71815 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -72,6 +69,12 @@
 		CAA327EB1AC3A07C00E71815 /* StoryCreate&Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "StoryCreate&Add.m"; sourceTree = "<group>"; };
 		CAA327ED1AC3A15D00E71815 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		CAA327EE1AC3A15D00E71815 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		CAA327FC1AC3A8A400E71815 /* Storyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Storyline.h; sourceTree = "<group>"; };
+		CAA327FD1AC3A8A400E71815 /* Storyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Storyline.m; sourceTree = "<group>"; };
+		CAA327FF1AC3A8A500E71815 /* StoryBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryBook.h; sourceTree = "<group>"; };
+		CAA328001AC3A8A500E71815 /* StoryBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryBook.m; sourceTree = "<group>"; };
+		CAA328021AC3C75C00E71815 /* StoryAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryAdd.h; sourceTree = "<group>"; };
+		CAA328031AC3C75C00E71815 /* StoryAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryAdd.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,10 +164,10 @@
 		CA880F701AC3688000ADF404 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CAA327CB1AC393BC00E71815 /* StoryBook.h */,
-				CAA327CC1AC393BC00E71815 /* StoryBook.m */,
-				CAA327C81AC393BC00E71815 /* Storyline.h */,
-				CAA327C91AC393BC00E71815 /* Storyline.m */,
+				CAA327FF1AC3A8A500E71815 /* StoryBook.h */,
+				CAA328001AC3A8A500E71815 /* StoryBook.m */,
+				CAA327FC1AC3A8A400E71815 /* Storyline.h */,
+				CAA327FD1AC3A8A400E71815 /* Storyline.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -220,6 +223,8 @@
 		CAA327E61AC39F9F00E71815 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CAA328021AC3C75C00E71815 /* StoryAdd.h */,
+				CAA328031AC3C75C00E71815 /* StoryAdd.m */,
 				CAA327EA1AC3A07C00E71815 /* StoryCreate&Add.h */,
 				CAA327EB1AC3A07C00E71815 /* StoryCreate&Add.m */,
 				CAA327E71AC3A00800E71815 /* StoryLineDetail.h */,
@@ -332,17 +337,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA880F4D1AC367EA00ADF404 /* AppDelegate.m in Sources */,
+				CAA327FE1AC3A8A400E71815 /* Storyline.m in Sources */,
+				CAA328011AC3A8A500E71815 /* StoryBook.m in Sources */,
 				CAA327E11AC39F3700E71815 /* ListStoryLine.m in Sources */,
 				CAA327EC1AC3A07C00E71815 /* StoryCreate&Add.m in Sources */,
+				CAA328041AC3C75C00E71815 /* StoryAdd.m in Sources */,
 				CAA327EF1AC3A15D00E71815 /* MapViewController.m in Sources */,
 				CAA327E91AC3A00800E71815 /* StoryLineDetail.m in Sources */,
 				CAA327DB1AC39E8F00E71815 /* ListByCategories.m in Sources */,
 				CA880F501AC367EA00ADF404 /* tweetStory.xcdatamodeld in Sources */,
 				CA880F4A1AC367EA00ADF404 /* main.m in Sources */,
 				CAA327DE1AC39F0000E71815 /* ListStoryByCategoryType.m in Sources */,
-				CAA327CD1AC393BC00E71815 /* StoryBook.m in Sources */,
 				CAA327D81AC39E5300E71815 /* ManageStory.m in Sources */,
-				CAA327CA1AC393BC00E71815 /* Storyline.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

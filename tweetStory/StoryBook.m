@@ -7,15 +7,17 @@
 //
 
 #import "StoryBook.h"
+#import "Storyline.h"
 
 
 @implementation StoryBook
 
-@dynamic title;
+@dynamic category;
 @dynamic createrUser;
 @dynamic creatorLocation;
-@dynamic category;
-@dynamic media;
-@dynamic storyBook;
+@dynamic title;
+@dynamic storylines;
+
+
 
 @end

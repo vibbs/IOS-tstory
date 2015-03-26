@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Storyline.h"
+#import "StoryBook.h"
+#import "AppDelegate.h"
 
 @interface ListByCategories : UITableViewController
 

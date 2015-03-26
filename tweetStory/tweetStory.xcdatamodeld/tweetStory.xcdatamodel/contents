@@ -4,20 +4,17 @@
         <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="createrUser" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="creatorLocation" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="media" optional="YES" attributeType="Binary" syncable="YES"/>
-        <attribute name="storyBook" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="storylines" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Storyline" inverseName="storybook" inverseEntity="Storyline" syncable="YES"/>
+        <relationship name="storylines" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Storyline" syncable="YES"/>
     </entity>
     <entity name="Storyline" representedClassName="Storyline" syncable="YES">
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="media" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="storyline" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="storybook" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StoryBook" inverseName="storylines" inverseEntity="StoryBook" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Storyline" positionX="-45" positionY="-36" width="128" height="118"/>
-        <element name="StoryBook" positionX="583" positionY="-0" width="128" height="148"/>
+        <element name="Storyline" positionX="-45" positionY="-36" width="128" height="103"/>
+        <element name="StoryBook" positionX="583" positionY="-0" width="128" height="118"/>
     </elements>
 </model>

@@ -12,9 +12,9 @@
 
 @interface Storyline : NSManagedObject
 
-@property (nonatomic, retain) NSData * media;
-@property (nonatomic, retain) NSString * user;
 @property (nonatomic, retain) NSString * location;
+@property (nonatomic, retain) NSData * media;
 @property (nonatomic, retain) NSString * storyline;
+@property (nonatomic, retain) NSString * user;
 
 @end

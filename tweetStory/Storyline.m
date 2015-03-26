@@ -11,9 +11,9 @@
 
 @implementation Storyline
 
-@dynamic media;
-@dynamic user;
 @dynamic location;
+@dynamic media;
 @dynamic storyline;
+@dynamic user;
 
 @end
