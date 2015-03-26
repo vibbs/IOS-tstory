@@ -64,6 +64,9 @@
                                 <state key="normal" title="Camera">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="6c5-1t-CDo" kind="show" id="OTj-40-7hf"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Use Location?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Gv-aa-w9O">
                                 <rect key="frame" x="16" y="403" width="111" height="21"/>
@@ -671,6 +674,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y0x-hC-6L7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2001" y="782"/>
+        </scene>
+        <!--Pictures-->
+        <scene sceneID="2jX-0G-vMe">
+            <objects>
+                <viewController title="Pictures" id="6c5-1t-CDo" customClass="PicturesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5jx-4U-Uwv"/>
+                        <viewControllerLayoutGuide type="bottom" id="vry-gD-lVL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bqc-ST-9qs">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vxc-Cs-O2h">
+                                <rect key="frame" x="51" y="623" width="97" height="30"/>
+                                <state key="normal" title="Take a Picture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takeAPicture:" destination="6c5-1t-CDo" eventType="touchUpInside" id="sI4-KX-byR"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XrE-Iu-c5Z">
+                                <rect key="frame" x="0.0" y="64" width="768" height="538"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ugc-EN-wgj">
+                                <rect key="frame" x="583" y="623" width="98" height="30"/>
+                                <state key="normal" title="View a Picture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="viewPictureLibrary:" destination="6c5-1t-CDo" eventType="touchUpInside" id="sCr-tl-VYw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XrE-Iu-c5Z" firstAttribute="leading" secondItem="bqc-ST-9qs" secondAttribute="leading" id="6OV-dA-AjY"/>
+                            <constraint firstAttribute="trailing" secondItem="XrE-Iu-c5Z" secondAttribute="trailing" id="6fq-fP-rJg"/>
+                            <constraint firstItem="Ugc-EN-wgj" firstAttribute="top" secondItem="XrE-Iu-c5Z" secondAttribute="bottom" constant="28" id="7cN-aL-850"/>
+                            <constraint firstAttribute="trailing" secondItem="Ugc-EN-wgj" secondAttribute="trailing" constant="7" id="DY8-OC-ald"/>
+                            <constraint firstItem="XrE-Iu-c5Z" firstAttribute="top" secondItem="5jx-4U-Uwv" secondAttribute="bottom" constant="18" id="Hdc-9h-fuK"/>
+                            <constraint firstItem="Vxc-Cs-O2h" firstAttribute="leading" secondItem="bqc-ST-9qs" secondAttribute="leading" constant="16" id="jup-mt-dhg"/>
+                            <constraint firstItem="Vxc-Cs-O2h" firstAttribute="top" secondItem="XrE-Iu-c5Z" secondAttribute="bottom" constant="28" id="vQv-RX-nef"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Camera Control" id="ihW-mF-dN6"/>
+                    <connections>
+                        <outlet property="imageView" destination="XrE-Iu-c5Z" id="y9H-gP-5BN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QSZ-m4-4cw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="203" y="-963"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

@@ -27,6 +27,7 @@
 		CAA327FE1AC3A8A400E71815 /* Storyline.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA327FD1AC3A8A400E71815 /* Storyline.m */; };
 		CAA328011AC3A8A500E71815 /* StoryBook.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA328001AC3A8A500E71815 /* StoryBook.m */; };
 		CAA328041AC3C75C00E71815 /* StoryAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA328031AC3C75C00E71815 /* StoryAdd.m */; };
+		CAA328071AC3E6DE00E71815 /* PicturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA328061AC3E6DE00E71815 /* PicturesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		CAA328001AC3A8A500E71815 /* StoryBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryBook.m; sourceTree = "<group>"; };
 		CAA328021AC3C75C00E71815 /* StoryAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryAdd.h; sourceTree = "<group>"; };
 		CAA328031AC3C75C00E71815 /* StoryAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryAdd.m; sourceTree = "<group>"; };
+		CAA328051AC3E6DE00E71815 /* PicturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicturesViewController.h; sourceTree = "<group>"; };
+		CAA328061AC3E6DE00E71815 /* PicturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicturesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +204,8 @@
 		CAA327D51AC39D8000E71815 /* AppController */ = {
 			isa = PBXGroup;
 			children = (
+				CAA328051AC3E6DE00E71815 /* PicturesViewController.h */,
+				CAA328061AC3E6DE00E71815 /* PicturesViewController.m */,
 				CAA327E61AC39F9F00E71815 /* View */,
 				CAA327E51AC39F9700E71815 /* Table */,
 			);
@@ -349,6 +354,7 @@
 				CA880F4A1AC367EA00ADF404 /* main.m in Sources */,
 				CAA327DE1AC39F0000E71815 /* ListStoryByCategoryType.m in Sources */,
 				CAA327D81AC39E5300E71815 /* ManageStory.m in Sources */,
+				CAA328071AC3E6DE00E71815 /* PicturesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
