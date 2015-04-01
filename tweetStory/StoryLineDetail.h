@@ -25,8 +25,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbuser;
 
 
+@property (weak, nonatomic) IBOutlet UIImageView *set;
 
-
+@property (nonatomic, retain) UIImage * media;
 - (IBAction)postToFacebook:(id)sender;
 
 - (IBAction)sendATweet:(id)sender;

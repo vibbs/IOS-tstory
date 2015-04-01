@@ -33,6 +33,9 @@
     [self refreshView];
 }
 
+
+
+
 -(void)loaddata{
     
     /**********************************************************************************/
@@ -71,6 +74,24 @@
 
 }
 
+-(void) refresh{
+    CGRect rect = CGRectMake(0,0,75,75);
+    UIGraphicsBeginImageContext( rect.size );
+    _media =[UIImage imageWithData:[_thisline valueForKey:@"media"]];
+    
+    if (_media==NULL) {
+        return;
+    }else{
+    [_media drawInRect:rect];
+    UIImage *picture1 = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    NSData *imageData = UIImagePNGRepresentation(picture1);
+    UIImage *img=[UIImage imageWithData:imageData];
+    [_set setImage:img];
+    }
+}
+
 
 -(void)refreshView{
     
@@ -83,6 +104,8 @@
      NSLog(@"%@",[_thisline valueForKey:@"sname"]);
      NSLog(@"%@",[_thisline valueForKey:@"sline"]);
      NSLog(@"%@", [_thisstory valueForKey:@"createrUser"]);
+    
+    [self refresh];
     
 }
 
@@ -121,28 +144,39 @@
 
 
 - (IBAction)postToFacebook:(id)sender {
+    
+    NSString * title = [_thisline valueForKey:@"title"];
+    NSString * stry = [_thisline valueForKey:@"title"];
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
         NSLog(@"We can post a message to Facebook!");
-        SLComposeViewController *vc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
         
-        [vc setInitialText:@"This StoryLine blah blah"];
+        SLComposeViewController *vc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+     
+        
+        NSLog(@"Title: %@ \n Storyline:%@ \n-this is my story addition", title,stry);
+        [vc setInitialText:(@"Hello my Facebook friends, \nTitle: %@ \n Storyline:%@ \n-this is my story addition #tweetStoryapp-IOS", title,stry)];
         //[vc addImage:<image here>]
         [self presentViewController:vc animated:YES completion:nil];
     }
     else {
         NSLog(@"We cannot post to Facebook");
+         NSLog(@"Title: %@ \n Storyline:%@ \n-this is my story addition", title,stry);
     }
 }
 
 - (IBAction)sendATweet:(id)sender {
+    
+    NSString * title = [_thisline valueForKey:@"title"];
+    NSString * stry = [_thisline valueForKey:@"title"];
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
         NSLog(@"We can send a tweet!");
         SLComposeViewController *vc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-        [vc setInitialText:@"This StoryLine blah blah"];
+        [vc setInitialText:(@"Hello my twitter friends,\nTitle: %@ \n Storyline: %@ \n-this is my story addition #tweetStoryapp-IOS", title,stry)];
         [self presentViewController:vc animated:YES completion:nil];
     }
     else {
         NSLog(@"We cannot send a tweet!");
+         NSLog(@"Title: %@ \n Storyline:%@ \n-this is my story addition", title,stry);
     }
 }
 

@@ -10,7 +10,7 @@
 
 @interface PicturesViewController ()
 
-@property (nonatomic, retain) UIImage* send;
+
 
 @end
 
@@ -19,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+     NSLog(@"Entered picture view ");
+    NSLog(@"%@",_send);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,7 +28,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -36,26 +38,17 @@
  
  
  if ([[segue identifier] isEqual:@"startstory"]) {
- StoryCreate_Add *vc = segue.sourceViewController;
+ StoryCreate_Add *vc = segue.destinationViewController;
  UIImage *p = _send;
  
  
  NSLog(@"This is the selected image sent to start story");
- 
+  NSLog(@"%@",_send);
  vc.media = p;
  }
- 
- if ([[segue identifier] isEqual:@"addstory"]) {
- StoryAdd *vc = segue.sourceViewController;
-UIImage *p = _send;
- 
- 
- NSLog(@"This is the selected  sent to add story ");
- 
- vc.media = p;
- }
+
 }
-*/
+
 
 - (IBAction)takeAPicture:(id)sender {
     

@@ -59,12 +59,13 @@
         NSLog(@"We can post a message to Facebook!");
         SLComposeViewController *vc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
         
-        [vc setInitialText:@"Hello my Facebook friends, Checkout my story at #tweetstoryapp-IOS"];
+        [vc setInitialText:(@"Hello my Facebook friends, Checkout my story at #tweetStoryapp-IOS\n Title: @%@", _segValue)];
         //[vc addImage:<image here>]
         [self presentViewController:vc animated:YES completion:nil];
     }
     else {
         NSLog(@"We cannot post to Facebook");
+        NSLog(@"Hello my Facebook friends, Checkout my story at #tweetStoryapp-IOS\n Title: @%@", _segValue);
     }
 }
 
@@ -72,11 +73,12 @@
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
         NSLog(@"We can send a tweet!");
         SLComposeViewController *vc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-        [vc setInitialText:@"Hello my twitter friends, Checkout my story at #tweetstoryapp-IOS"];
+        [vc setInitialText:(@"Hello my twitter friends, Checkout my story at #tweetStoryapp-IOS\n Title: @%@", _segValue)];
         [self presentViewController:vc animated:YES completion:nil];
     }
     else {
         NSLog(@"We cannot send a tweet!");
+         NSLog(@"Hello my twitter friends, Checkout my story at #tweetStoryapp-IOS\n Title: @%@", _segValue);
     }
 }
 

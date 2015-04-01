@@ -15,6 +15,7 @@
 @interface PicturesViewController : UIViewController <UIImagePickerControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (nonatomic, retain) UIImage* send;
 
 
 - (IBAction)takeAPicture:(id)sender;
