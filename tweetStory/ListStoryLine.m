@@ -141,6 +141,7 @@
         NSLog(@"%@",p);
         
         vc.segValue = p;
+        vc.index = self.myTableView.indexPathForSelectedRow.row;
         
         NSLog(@"%@",vc.segValue );
     }

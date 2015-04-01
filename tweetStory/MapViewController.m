@@ -46,7 +46,7 @@
         [self placePins:[[_arr objectAtIndex:i] valueForKey:@"sloc"]];
     }
     
-    for (int i=0; i<[_arr count]; i++) {
+    for (int i=0; i<[_sarr count]; i++) {
         
         
         [self placePins:[_sarr objectAtIndex:i]];

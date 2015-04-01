@@ -9,6 +9,7 @@
 #import "home.h"
 
 @interface home ()
+@property (nonatomic) NSUInteger counter;
 
 @end
 
@@ -17,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _counter = 0;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,8 +39,14 @@
 }
 
 - (IBAction)userDidLongPress:(id)sender {
+    _counter++;
+    if (_counter%2==1) {
+         [self performSegueWithIdentifier:@"world" sender:self];
+    }else{
+         
+    }
     NSLog(@"Long Press Detected");
-    [self performSegueWithIdentifier:@"world" sender:self];
+   
 }
 
 

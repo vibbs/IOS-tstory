@@ -14,7 +14,7 @@
 @interface StoryLineDetail : UIViewController
 
 @property  (nonatomic, retain) NSString * segValue;
-
+@property  (nonatomic) NSInteger index;
 
 @property (weak, nonatomic) IBOutlet UILabel *lbtitle;
 

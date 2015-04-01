@@ -58,8 +58,12 @@
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
         NSLog(@"We can post a message to Facebook!");
         SLComposeViewController *vc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        NSString * msg =@"Hello my Facebook friends chelout my story at #tweetStoryapp-IOS\n";
+        msg = [msg stringByAppendingString:@"StoryTitle: "];
+        msg = [msg stringByAppendingString:(@"%@\n",_segValue)];
         
-        [vc setInitialText:(@"Hello my Facebook friends, Checkout my story at #tweetStoryapp-IOS\n Title: @%@", _segValue)];
+        
+        [vc setInitialText:msg];
         //[vc addImage:<image here>]
         [self presentViewController:vc animated:YES completion:nil];
     }
@@ -70,10 +74,14 @@
 }
 
 - (IBAction)sendATweet:(id)sender {
+    NSString * msg =@"Hello my twitter friends chelout my story at #tweetStoryapp-IOS\n";
+    msg = [msg stringByAppendingString:@"StoryTitle: "];
+    msg = [msg stringByAppendingString:(@"%@\n",_segValue)];
+    
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
         NSLog(@"We can send a tweet!");
         SLComposeViewController *vc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-        [vc setInitialText:(@"Hello my twitter friends, Checkout my story at #tweetStoryapp-IOS\n Title: @%@", _segValue)];
+        [vc setInitialText:msg];
         [self presentViewController:vc animated:YES completion:nil];
     }
     else {
