@@ -12,6 +12,9 @@
 @interface ListByCategories ()
 
 @property (nonatomic, retain) NSArray * arr;
+@property (nonatomic,retain) NSArray * clean;
+@property (nonatomic,retain) NSMutableArray * unq;
+@property (nonatomic,retain) NSString * str;
 
 @end
 
@@ -43,12 +46,57 @@
     
     NSLog(@"%@", [[_arr lastObject] valueForKey:@"category"]);
     
+    _unq = [[NSMutableArray alloc] init];
+    _str = [[NSString alloc ] init];
+    
+    for (int i=0; i<[_arr count]; i++) {
+        _str = [[_arr objectAtIndex:i] valueForKey:@"category"];
+        [_unq addObject:_str];
+           NSLog(@"**********************************************************");
+        NSLog(@"%@", _str);
+           NSLog(@"**********************************************************");
+        NSLog(@"Main arr");
+        NSLog(@"%@", _arr);
+        
+    }
+    NSLog(@"something");
+    
+      NSLog(@"**********************************************************");
+    
+    _clean = [[NSSet setWithArray:_unq] allObjects];
+    
+    [self print];
+  
+
+    
+}
+
+-(void) print{
+    for (int i=0; i<[_clean count]; i++) {
+        
+        NSLog(@"clean code");
+        
+        NSLog(@"**********************************************************");
+        NSLog(@"%@", [_clean objectAtIndex:i]);
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+
+
+
+
+
+
+
+
 
 #pragma mark - Table view data source
 
@@ -61,7 +109,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [_arr count];
+    return [_clean count];
 }
 
 
@@ -69,10 +117,13 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID" forIndexPath:indexPath];
     
     // Configure the cell...
-    [[cell textLabel] setText:[[_arr objectAtIndex:indexPath.row] valueForKey:@"category"]];
+    [[cell textLabel] setText:[_clean objectAtIndex:indexPath.row]] ;
     
     return cell;
 }
+
+
+
 
 
 /*
@@ -108,15 +159,32 @@
     return YES;
 }
 */
+- (IBAction)userSwipedLeft:(id)sender {
+    NSLog(@"User Swiped Left");
+    [self performSegueWithIdentifier:@"cat" sender:self];
+}
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+ 
+    NSLog(@"seg entered");
+    if([[segue identifier] isEqual:@"cat"]){
+            NSLog(@"entered the if condition");
+            ListStoryByCategoryType *vc = segue.destinationViewController;
+            NSString *p = [_clean objectAtIndex:self.myTableView.indexPathForSelectedRow.row];
+        
+        NSLog(@"%@",p);
+        
+            vc.segValue = p;
+        
+        NSLog(@"%@",vc.segValue );
+        }
 }
-*/
+
 
 @end

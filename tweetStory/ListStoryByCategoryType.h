@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import "ListStoryLine.h"
 
 @interface ListStoryByCategoryType : UITableViewController
 
+@property  (nonatomic, retain) NSString * segValue;
+@property (strong, nonatomic) IBOutlet UITableView *myTableView;
+
+-(IBAction)unwindtoline:(UIStoryboardSegue *)seg;
+
+@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *gestureSwipeLeft;
 @end

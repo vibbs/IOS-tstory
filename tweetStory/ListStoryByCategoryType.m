@@ -10,7 +10,12 @@
 
 @interface ListStoryByCategoryType ()
 
+
+@property (nonatomic,retain ) NSString * cat;
 @property (nonatomic, retain) NSArray * arr;
+@property (nonatomic,retain) NSArray * clean;
+@property (nonatomic,retain) NSMutableArray * unq;
+@property (nonatomic,retain) NSString * str;
 
 @end
 
@@ -24,18 +29,42 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    NSLog(@"Entered listby category");
+    NSLog(@"Entered listby title");
+    self.title = _segValue;
+    NSLog(@"%@",_segValue);
     
-    _arr = [[NSMutableArray alloc] initWithObjects:@"story1",@"story2",@"story3", @"story4", nil];
-    /*
+    //_arr = [[NSMutableArray alloc] initWithObjects:@"story1",@"story2",@"story3", @"story4", nil];
+    
     AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"StoryBook" inManagedObjectContext:app.managedObjectContext];
     [fetchRequest setEntity:entity];
+    NSPredicate *exactPredicate = [NSPredicate predicateWithFormat:@"%K == %@", @"category", _segValue];
+    
+    [fetchRequest setPredicate:exactPredicate];
     
     NSError *err = nil;
-    _arr = [app.managedObjectContext executeFetchRequest:fetchRequest error:&err];*/
+    _arr = [app.managedObjectContext executeFetchRequest:fetchRequest error:&err];
+    
+    _unq = [[NSMutableArray alloc] init];
+    _str = [[NSString alloc ] init];
+    
+    for (int i=0; i<[_arr count]; i++) {
+        _str = [[_arr objectAtIndex:i] valueForKey:@"title"];
+        [_unq addObject:_str];
+        NSLog(@"**********************************************************");
+        NSLog(@"%@", _str);
+        NSLog(@"**********************************************************");
+        NSLog(@"Main arr");
+        NSLog(@"%@", _arr);
+        
+    }
+    NSLog(@"something");
+    
+    NSLog(@"**********************************************************");
+    
+    _clean = [[NSSet setWithArray:_unq] allObjects];
     
     
 }
@@ -44,6 +73,63 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+
+// Whole purpose of these three methods is to get the first response to UIResponder
+- (BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [self becomeFirstResponder];
+    [super viewDidAppear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated  {
+    [self resignFirstResponder];
+    [super viewDidDisappear:animated];
+}
+// End of three methods
+
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    if (motion == UIEventSubtypeMotionShake) {
+        NSLog(@"Shake has started");
+    }
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    if (motion == UIEventSubtypeMotionShake) {
+        NSLog(@"Shake has ended");
+        [self pickARandom];
+    }
+}
+
+- (void)pickARandom {
+    NSLog(@"Lets start picking a random story");
+    NSLog(@"Here is how many stories we have %lu", (unsigned long)[_clean count]);
+    
+    int randomNumber = arc4random_uniform([_clean count] - 1);
+    NSLog(@"Here is the random number that I picked %i", randomNumber);
+    NSLog(@"This is the story that was selected %@", [_clean objectAtIndex:randomNumber]);
+    
+    
+    UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:[_clean objectAtIndex:randomNumber]
+                                                          message:@"Read this one"
+                                                         delegate:nil
+                                                cancelButtonTitle:@"OK"
+                                                otherButtonTitles:nil];
+    [myAlertView show];
+
+}
+
+
+
+
+
+
+
 
 #pragma mark - Table view data source
 
@@ -56,7 +142,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [_arr count];
+    return [_clean count];
 }
 
 
@@ -64,7 +150,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID" forIndexPath:indexPath];
     
     // Configure the cell...
- [[cell textLabel] setText:[_arr objectAtIndex:indexPath.row]];
+ [[cell textLabel] setText:[_clean objectAtIndex:indexPath.row]] ;
     
     return cell;
 }
@@ -103,15 +189,37 @@
     return YES;
 }
 */
+- (IBAction)userSwipedLeft:(id)sender {
+    NSLog(@"User Swiped Left");
+    [self performSegueWithIdentifier:@"title" sender:self];
+}
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    NSLog(@"seg entered");
+    if([[segue identifier] isEqual:@"title"]){
+        NSLog(@"entered the if condition");
+        ListStoryLine *vc = segue.destinationViewController;
+        NSString *p = [_clean objectAtIndex:self.myTableView.indexPathForSelectedRow.row];
+        
+        NSLog(@"%@",p);
+        
+        vc.segValue = p;
+        
+        NSLog(@"%@",vc.segValue );
+    }
 }
-*/
+
+-(IBAction)unwindtoline:(UIStoryboardSegue *)seg {
+    StoryCreate_Add  *vc = seg.sourceViewController;
+    
+}
+
 
 @end

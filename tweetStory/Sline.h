@@ -1,5 +1,5 @@
 //
-//  StoryBook.h
+//  Sline.h
 //  tweetStory
 //
 //  Created by Doddihal, Vaibhav A on 3/28/15.
@@ -10,12 +10,12 @@
 #import <CoreData/CoreData.h>
 
 
-@interface StoryBook : NSManagedObject
+@interface Sline : NSManagedObject
 
-
-@property (nonatomic, retain) NSString * category;
-@property (nonatomic, retain) NSString * createrUser;
-@property (nonatomic, retain) NSString * creatorLocation;
+@property (nonatomic, retain) NSString * sline;
+@property (nonatomic, retain) NSString * sloc;
+@property (nonatomic, retain) NSString * sname;
+@property (nonatomic, retain) NSData * media;
 @property (nonatomic, retain) NSString * title;
 
 @end

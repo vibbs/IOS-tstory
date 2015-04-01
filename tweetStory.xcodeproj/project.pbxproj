@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA2D03851AC6A6DA00D6320B /* home.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2D03841AC6A6DA00D6320B /* home.m */; };
 		CA880F4A1AC367EA00ADF404 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA880F491AC367EA00ADF404 /* main.m */; };
 		CA880F4D1AC367EA00ADF404 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA880F4C1AC367EA00ADF404 /* AppDelegate.m */; };
 		CA880F501AC367EA00ADF404 /* tweetStory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA880F4E1AC367EA00ADF404 /* tweetStory.xcdatamodeld */; };
 		CA880F561AC367EA00ADF404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA880F541AC367EA00ADF404 /* Main.storyboard */; };
-		CA880F581AC367EA00ADF404 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA880F571AC367EA00ADF404 /* Images.xcassets */; };
+		CA880F581AC367EA00ADF404 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CA880F571AC367EA00ADF404 /* icon.png */; };
 		CA880F5B1AC367EA00ADF404 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA880F591AC367EA00ADF404 /* LaunchScreen.xib */; };
 		CA880F671AC367EA00ADF404 /* tweetStoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA880F661AC367EA00ADF404 /* tweetStoryTests.m */; };
 		CAA327CF1AC39D2C00E71815 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA327CE1AC39D2C00E71815 /* MapKit.framework */; };
@@ -24,10 +25,13 @@
 		CAA327E91AC3A00800E71815 /* StoryLineDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA327E81AC3A00800E71815 /* StoryLineDetail.m */; };
 		CAA327EC1AC3A07C00E71815 /* StoryCreate&Add.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA327EB1AC3A07C00E71815 /* StoryCreate&Add.m */; };
 		CAA327EF1AC3A15D00E71815 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA327EE1AC3A15D00E71815 /* MapViewController.m */; };
-		CAA327FE1AC3A8A400E71815 /* Storyline.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA327FD1AC3A8A400E71815 /* Storyline.m */; };
-		CAA328011AC3A8A500E71815 /* StoryBook.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA328001AC3A8A500E71815 /* StoryBook.m */; };
 		CAA328041AC3C75C00E71815 /* StoryAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA328031AC3C75C00E71815 /* StoryAdd.m */; };
 		CAA328071AC3E6DE00E71815 /* PicturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA328061AC3E6DE00E71815 /* PicturesViewController.m */; };
+		CAF4D9D41AC75125001D2F8D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CAF4D9D31AC75125001D2F8D /* icon.png */; };
+		CAF4D9D81AC76A52001D2F8D /* Storyline.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF4D9D71AC76A52001D2F8D /* Storyline.m */; };
+		CAF4D9DB1AC773C5001D2F8D /* StoryBook.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF4D9DA1AC773C5001D2F8D /* StoryBook.m */; };
+		CAF4D9E11AC77966001D2F8D /* Sline.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF4D9E01AC77966001D2F8D /* Sline.m */; };
+		CAF4D9E41AC7A946001D2F8D /* Website.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF4D9E31AC7A946001D2F8D /* Website.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA2D03831AC6A6DA00D6320B /* home.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = home.h; sourceTree = "<group>"; };
+		CA2D03841AC6A6DA00D6320B /* home.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = home.m; sourceTree = "<group>"; };
 		CA880F441AC367EA00ADF404 /* tweetStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tweetStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA880F481AC367EA00ADF404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA880F491AC367EA00ADF404 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -48,7 +54,7 @@
 		CA880F4C1AC367EA00ADF404 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CA880F4F1AC367EA00ADF404 /* tweetStory.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = tweetStory.xcdatamodel; sourceTree = "<group>"; };
 		CA880F551AC367EA00ADF404 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CA880F571AC367EA00ADF404 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CA880F571AC367EA00ADF404 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		CA880F5A1AC367EA00ADF404 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CA880F601AC367EA00ADF404 /* tweetStoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tweetStoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA880F651AC367EA00ADF404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,14 +76,19 @@
 		CAA327EB1AC3A07C00E71815 /* StoryCreate&Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "StoryCreate&Add.m"; sourceTree = "<group>"; };
 		CAA327ED1AC3A15D00E71815 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		CAA327EE1AC3A15D00E71815 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
-		CAA327FC1AC3A8A400E71815 /* Storyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Storyline.h; sourceTree = "<group>"; };
-		CAA327FD1AC3A8A400E71815 /* Storyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Storyline.m; sourceTree = "<group>"; };
-		CAA327FF1AC3A8A500E71815 /* StoryBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryBook.h; sourceTree = "<group>"; };
-		CAA328001AC3A8A500E71815 /* StoryBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryBook.m; sourceTree = "<group>"; };
 		CAA328021AC3C75C00E71815 /* StoryAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryAdd.h; sourceTree = "<group>"; };
 		CAA328031AC3C75C00E71815 /* StoryAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryAdd.m; sourceTree = "<group>"; };
 		CAA328051AC3E6DE00E71815 /* PicturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicturesViewController.h; sourceTree = "<group>"; };
 		CAA328061AC3E6DE00E71815 /* PicturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicturesViewController.m; sourceTree = "<group>"; };
+		CAF4D9D31AC75125001D2F8D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		CAF4D9D61AC76A52001D2F8D /* Storyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Storyline.h; sourceTree = "<group>"; };
+		CAF4D9D71AC76A52001D2F8D /* Storyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Storyline.m; sourceTree = "<group>"; };
+		CAF4D9D91AC773C5001D2F8D /* StoryBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryBook.h; sourceTree = "<group>"; };
+		CAF4D9DA1AC773C5001D2F8D /* StoryBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryBook.m; sourceTree = "<group>"; };
+		CAF4D9DF1AC77966001D2F8D /* Sline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sline.h; sourceTree = "<group>"; };
+		CAF4D9E01AC77966001D2F8D /* Sline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sline.m; sourceTree = "<group>"; };
+		CAF4D9E21AC7A946001D2F8D /* Website.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Website.h; sourceTree = "<group>"; };
+		CAF4D9E31AC7A946001D2F8D /* Website.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Website.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +96,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAA327D31AC39D3D00E71815 /* Social.framework in Frameworks */,
 				CAA327D11AC39D3500E71815 /* WebKit.framework in Frameworks */,
+				CAA327D31AC39D3D00E71815 /* Social.framework in Frameworks */,
 				CAA327CF1AC39D2C00E71815 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,8 +140,9 @@
 				CA880F711AC3689000ADF404 /* Controller */,
 				CA880F701AC3688000ADF404 /* Model */,
 				CA880F4B1AC367EA00ADF404 /* AppDelegate.h */,
+				CAF4D9D31AC75125001D2F8D /* icon.png */,
 				CA880F4C1AC367EA00ADF404 /* AppDelegate.m */,
-				CA880F571AC367EA00ADF404 /* Images.xcassets */,
+				CA880F571AC367EA00ADF404 /* icon.png */,
 				CA880F591AC367EA00ADF404 /* LaunchScreen.xib */,
 				CA880F4E1AC367EA00ADF404 /* tweetStory.xcdatamodeld */,
 				CA880F471AC367EA00ADF404 /* Supporting Files */,
@@ -167,10 +179,12 @@
 		CA880F701AC3688000ADF404 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CAA327FF1AC3A8A500E71815 /* StoryBook.h */,
-				CAA328001AC3A8A500E71815 /* StoryBook.m */,
-				CAA327FC1AC3A8A400E71815 /* Storyline.h */,
-				CAA327FD1AC3A8A400E71815 /* Storyline.m */,
+				CAF4D9DF1AC77966001D2F8D /* Sline.h */,
+				CAF4D9E01AC77966001D2F8D /* Sline.m */,
+				CAF4D9D91AC773C5001D2F8D /* StoryBook.h */,
+				CAF4D9DA1AC773C5001D2F8D /* StoryBook.m */,
+				CAF4D9D61AC76A52001D2F8D /* Storyline.h */,
+				CAF4D9D71AC76A52001D2F8D /* Storyline.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -228,6 +242,10 @@
 		CAA327E61AC39F9F00E71815 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CAF4D9E21AC7A946001D2F8D /* Website.h */,
+				CAF4D9E31AC7A946001D2F8D /* Website.m */,
+				CA2D03831AC6A6DA00D6320B /* home.h */,
+				CA2D03841AC6A6DA00D6320B /* home.m */,
 				CAA328021AC3C75C00E71815 /* StoryAdd.h */,
 				CAA328031AC3C75C00E71815 /* StoryAdd.m */,
 				CAA327EA1AC3A07C00E71815 /* StoryCreate&Add.h */,
@@ -321,9 +339,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAF4D9D41AC75125001D2F8D /* icon.png in Resources */,
 				CA880F561AC367EA00ADF404 /* Main.storyboard in Resources */,
 				CA880F5B1AC367EA00ADF404 /* LaunchScreen.xib in Resources */,
-				CA880F581AC367EA00ADF404 /* Images.xcassets in Resources */,
+				CA880F581AC367EA00ADF404 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,17 +361,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA880F4D1AC367EA00ADF404 /* AppDelegate.m in Sources */,
-				CAA327FE1AC3A8A400E71815 /* Storyline.m in Sources */,
-				CAA328011AC3A8A500E71815 /* StoryBook.m in Sources */,
+				CAF4D9D81AC76A52001D2F8D /* Storyline.m in Sources */,
 				CAA327E11AC39F3700E71815 /* ListStoryLine.m in Sources */,
 				CAA327EC1AC3A07C00E71815 /* StoryCreate&Add.m in Sources */,
 				CAA328041AC3C75C00E71815 /* StoryAdd.m in Sources */,
 				CAA327EF1AC3A15D00E71815 /* MapViewController.m in Sources */,
 				CAA327E91AC3A00800E71815 /* StoryLineDetail.m in Sources */,
+				CAF4D9E41AC7A946001D2F8D /* Website.m in Sources */,
 				CAA327DB1AC39E8F00E71815 /* ListByCategories.m in Sources */,
+				CAF4D9DB1AC773C5001D2F8D /* StoryBook.m in Sources */,
 				CA880F501AC367EA00ADF404 /* tweetStory.xcdatamodeld in Sources */,
+				CA2D03851AC6A6DA00D6320B /* home.m in Sources */,
 				CA880F4A1AC367EA00ADF404 /* main.m in Sources */,
 				CAA327DE1AC39F0000E71815 /* ListStoryByCategoryType.m in Sources */,
+				CAF4D9E11AC77966001D2F8D /* Sline.m in Sources */,
 				CAA327D81AC39E5300E71815 /* ManageStory.m in Sources */,
 				CAA328071AC3E6DE00E71815 /* PicturesViewController.m in Sources */,
 			);

@@ -10,8 +10,9 @@
 
 @interface ListStoryLine ()
 
-@property (nonatomic, retain) NSMutableArray * arr;
+@property (nonatomic, retain) NSArray * arr;
 
+@property (nonatomic, retain) NSSet * ss;
 @end
 
 @implementation ListStoryLine
@@ -24,9 +25,33 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    NSLog(@"Entered listby category");
+    NSLog(@"Entered listby storyline");
+    self.title = _segValue;
     
-    _arr = [[NSMutableArray alloc] initWithObjects:@"storyline1",@"storyline2",@"storyline3", @"storyline4", nil];
+   // _arr = [[NSMutableArray alloc] initWithObjects:@"storyline1",@"storyline2",@"storyline3", @"storyline4", nil];
+    
+    
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Sline" inManagedObjectContext:app.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    
+    
+    
+    NSPredicate *exactPredicate = [NSPredicate predicateWithFormat:@"%K == %@", @"title", _segValue];
+    
+    [fetchRequest setPredicate:exactPredicate];
+    
+    NSError *err = nil;
+    _arr = [app.managedObjectContext executeFetchRequest:fetchRequest error:&err];
+    
+    
+    
+    /**********************************************************************************/
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,13 +62,13 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
+
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
     return [_arr count];
 }
@@ -53,7 +78,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID" forIndexPath:indexPath];
     
     // Configure the cell...
- [[cell textLabel] setText:[_arr objectAtIndex:indexPath.row]];
+    [[cell textLabel] setText:[[_arr objectAtIndex:indexPath.row] valueForKey:@"sline"]];
     
     return cell;
 }
@@ -92,15 +117,47 @@
     return YES;
 }
 */
+- (IBAction)userSwipedLeft:(id)sender {
+    NSLog(@"User Swiped Left");
+    [self performSegueWithIdentifier:@"str" sender:self];
+}
 
-/*
+
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    NSLog(@"seg entered");
+    NSLog(@"%@", _ss );
+    if([[segue identifier] isEqual:@"str"]){
+        NSLog(@"entered the if condition");
+        StoryLineDetail *vc = segue.destinationViewController;
+        NSString *p = [[_arr objectAtIndex:self.myTableView.indexPathForSelectedRow.row] valueForKey:@"title"];
+        
+        NSLog(@"%@",p);
+        
+        vc.segValue = p;
+        
+        NSLog(@"%@",vc.segValue );
+    }
+    if([[segue identifier] isEqual:@"opt"]){
+        NSLog(@"entered the if condition");
+        ManageStory *vc = segue.destinationViewController;
+       
+        
+        
+        
+        vc.segValue = _segValue;
+        
+        NSLog(@"%@",vc.segValue );
+    }
 }
-*/
+
+
+
 
 @end

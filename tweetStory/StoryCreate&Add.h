@@ -10,10 +10,24 @@
 #import "Storyline.h"
 #import "StoryBook.h"
 #import "AppDelegate.h"
+#import <CoreLocation/CoreLocation.h>
+#import <AVFoundation/AVFoundation.h>
+#import "ListStoryLine.h"
+#import "PicturesViewController.h"
 
 
-@interface StoryCreate_Add : UIViewController
 
+
+@interface StoryCreate_Add : UIViewController <CLLocationManagerDelegate> {
+    CLLocationManager *locationManager;
+    CLGeocoder *geocoder;
+    CLPlacemark *place;
+}
+@property  (nonatomic, retain) NSString * segValue;
+
+@property (weak, nonatomic) IBOutlet UIImageView *set;
+
+@property (nonatomic, retain) UIImage * media;
 
 @property (strong, nonatomic) IBOutlet UITextField *titleText;
 @property (strong, nonatomic) IBOutlet UITextField *storylineText;
@@ -25,5 +39,11 @@
 - (IBAction)useName:(id)sender;
 - (IBAction)createStory:(id)sender;
 
+@property (strong, nonatomic) CLLocationManager * locationManager;
+
+
+
+
+- (IBAction)hideKeyboard:(id)sender;
 
 @end

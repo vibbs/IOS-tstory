@@ -8,11 +8,25 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import <AVFoundation/AVFoundation.h>
+#import "CoreLocation/CoreLocation.h"
+#import "PicturesViewController.h"
 
-@interface StoryAdd : UIViewController
-@property (strong, nonatomic) IBOutlet UILabel *lbTitle;
+@interface StoryAdd : UIViewController <CLLocationManagerDelegate> {
+    CLLocationManager *locationManager;
+    CLGeocoder *geocoder;
+    CLPlacemark *place;
+}
 
-@property (strong, nonatomic) IBOutlet UILabel *lbCategory;
+@property  (nonatomic, retain) NSString * segValue;
+
+@property (nonatomic, retain) UIImage * media;
+
+@property (weak, nonatomic) IBOutlet UIImageView *set;
+
+@property (weak, nonatomic) IBOutlet UILabel *lbTitle;
+
+@property (weak, nonatomic) IBOutlet UILabel *lbCategory;
 
 @property (strong, nonatomic) IBOutlet UITextField *storylineText;
 @property (strong, nonatomic) IBOutlet UITextField *locationText;
@@ -23,5 +37,11 @@
 
 
 - (IBAction)addStoryLine:(id)sender;
+
+- (IBAction)hideKeyboard:(id)sender;
+
+@property (strong, nonatomic) CLLocationManager * locationManager;
+
+
 
 @end

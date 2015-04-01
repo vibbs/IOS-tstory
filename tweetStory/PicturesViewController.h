@@ -9,6 +9,8 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import "StoryCreate&Add.h"
+#import "StoryAdd.h"
 
 @interface PicturesViewController : UIViewController <UIImagePickerControllerDelegate>
 

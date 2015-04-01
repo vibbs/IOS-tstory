@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+// Interacting with Facebook & Twitter
+#import <Social/Social.h>
+#import "AppDelegate.h"
+#import "StoryAdd.h"
 
 @interface ManageStory : UIViewController
+
+@property  (nonatomic, retain) NSString * segValue;
+
+- (IBAction)postToFacebook:(id)sender;
+
+- (IBAction)sendATweet:(id)sender;
+
+-(void)refreshView;
 
 @end

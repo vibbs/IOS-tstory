@@ -10,7 +10,15 @@
 #import "Storyline.h"
 #import "StoryBook.h"
 #import "AppDelegate.h"
+#import "ListStoryByCategoryType.h"
 
 @interface ListByCategories : UITableViewController
 
+@property  (nonatomic, retain) NSString * segValue;
+
+
+@property (strong, nonatomic) IBOutlet UITableView *myTableView;
+
+@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *gestureSwipeLeft;
+- (IBAction)userSwipedLeft:(id)sender;
 @end

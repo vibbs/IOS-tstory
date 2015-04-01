@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14B25" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Sline" representedClassName="Sline" syncable="YES">
+        <attribute name="media" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="sline" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sloc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="StoryBook" representedClassName="StoryBook" syncable="YES">
         <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="createrUser" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="creatorLocation" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="storylines" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Storyline" syncable="YES"/>
-    </entity>
-    <entity name="Storyline" representedClassName="Storyline" syncable="YES">
-        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="media" optional="YES" attributeType="Binary" syncable="YES"/>
-        <attribute name="storyline" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Storyline" positionX="-45" positionY="-36" width="128" height="103"/>
-        <element name="StoryBook" positionX="583" positionY="-0" width="128" height="118"/>
+        <element name="StoryBook" positionX="-63" positionY="-27" width="128" height="103"/>
+        <element name="Sline" positionX="-63" positionY="171" width="128" height="118"/>
     </elements>
 </model>

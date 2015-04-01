@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StoryLineDetail.h"
+#import "ManageStory.h"
+#import "AppDelegate.h"
 
 @interface ListStoryLine : UITableViewController
 
+@property  (nonatomic, retain) NSString * segValue;
+
+@property (strong, nonatomic) IBOutlet UITableView *myTableView;
+
+@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *gestureSwipeLeft;
 @end

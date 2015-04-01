@@ -10,6 +10,8 @@
 
 @interface PicturesViewController ()
 
+@property (nonatomic, retain) UIImage* send;
+
 @end
 
 @implementation PicturesViewController
@@ -31,6 +33,27 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+ 
+ 
+ if ([[segue identifier] isEqual:@"startstory"]) {
+ StoryCreate_Add *vc = segue.sourceViewController;
+ UIImage *p = _send;
+ 
+ 
+ NSLog(@"This is the selected image sent to start story");
+ 
+ vc.media = p;
+ }
+ 
+ if ([[segue identifier] isEqual:@"addstory"]) {
+ StoryAdd *vc = segue.sourceViewController;
+UIImage *p = _send;
+ 
+ 
+ NSLog(@"This is the selected  sent to add story ");
+ 
+ vc.media = p;
+ }
 }
 */
 
@@ -53,6 +76,7 @@
         picker.allowsEditing = YES;
         picker.sourceType = UIImagePickerControllerSourceTypeCamera;
         
+        
         [self presentViewController:picker animated:YES completion:nil];
     }
 }
@@ -63,18 +87,23 @@
     picker.allowsEditing = YES;
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     
+    
     [self presentViewController:picker animated:YES completion:nil];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    _send = chosenImage;
     self.imageView.image = chosenImage;
     [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    UIImageWriteToSavedPhotosAlbum(chosenImage, nil, nil, nil);
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
+
 
 
 

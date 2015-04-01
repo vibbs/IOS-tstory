@@ -2,19 +2,25 @@
 //  Storyline.h
 //  tweetStory
 //
-//  Created by Doddihal, Vaibhav A on 3/25/15.
+//  Created by Doddihal, Vaibhav A on 3/28/15.
 //  Copyright (c) 2015 edu.newhaven.ios.doddihal. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
+#import <AVFoundation/AVFoundation.h>
+
+@interface Storyline : NSObject
 
 
-@interface Storyline : NSManagedObject
+-(void)setSline:(NSString *)sline;
+-(void)setSloc:(NSString *)sloc;
+-(void)setSname:(NSString *)sname;
+-(void)setMedia:(UIImage *)media;
 
-@property (nonatomic, retain) NSString * location;
-@property (nonatomic, retain) NSData * media;
-@property (nonatomic, retain) NSString * storyline;
-@property (nonatomic, retain) NSString * user;
+-(NSString *)getSline;
+-(NSString *)getSloc;
+-(NSString *)getName;
+-(UIImage *)getMedia;
+
 
 @end
