@@ -19,6 +19,7 @@
 @property (nonatomic,retain) NSArray * sarr;
 @property (nonatomic,retain) NSManagedObject * thisline;
 @property (nonatomic,retain) NSManagedObject * thisstory;
+@property (nonatomic,retain) NSDate * thisdate;
 
 @end
 
@@ -33,6 +34,8 @@
     
     _countloc = 0;
     _countnam = 0;
+    _thisdate = [NSDate date ];
+    [_date setDate:_thisdate animated:YES];
     /**********************************************************************************/
     
     NSLog(@"entered the view did load");
@@ -141,6 +144,13 @@
     NSString* scategory = [_thisstory valueForKey:@"category"];
     NSString* slocation =_locationText.text;
     NSString* sname = _nameText.text;
+    
+    
+    //date
+    NSDateFormatter *dateformat = [[NSDateFormatter alloc] init];
+    [dateformat setDateFormat:@"yyyy-MM-dd"];
+    NSDate * dd = _date.date;
+    NSString * sdate = [dateformat stringFromDate:dd];
 
     NSLog(@"%@", sline);
     NSLog(@"%@", stitle);
@@ -159,6 +169,7 @@
     [thisStoryLine setValue:sname forKey:@"sname"];
     [thisStoryLine setValue:sline forKey:@"sline"];
     [thisStoryLine setValue:stitle forKey:@"title"];
+    [thisStoryLine setValue:sdate forKey:@"date"];
     
     //to store the media
     

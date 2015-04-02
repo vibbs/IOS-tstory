@@ -135,12 +135,25 @@
                                     <action selector="hideKeyboard:" destination="v3U-Ck-4EN" eventType="editingDidEnd" id="tLa-VC-lWA"/>
                                 </connections>
                             </textField>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="mo9-sD-gW2">
+                                <rect key="frame" x="79" y="676" width="610" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="449631774.708152">
+                                    <!--2015-04-02 01:42:54 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date today by default, unless you are creating a historic story .. lol" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5a-7F-Jfa">
+                                <rect key="frame" x="17" y="624" width="529" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.50674234990453004" green="0.96348606962730243" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Start a new Story" id="BjR-Ri-NMk"/>
                     <connections>
                         <outlet property="categoryText" destination="Gvu-fc-IoE" id="b5d-sI-naf"/>
+                        <outlet property="date" destination="mo9-sD-gW2" id="U3u-Mb-GUI"/>
                         <outlet property="locationText" destination="vVn-v6-SRc" id="RAY-fk-tXB"/>
                         <outlet property="nameText" destination="zhd-j5-Reu" id="2eO-0v-lhW"/>
                         <outlet property="set" destination="jn1-FE-7je" id="EVm-7d-rhL"/>
@@ -545,11 +558,24 @@ Then the story can be continued by anyone else in the group, which adds on to th
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date today by default, unless you are creating a historic story .. lol" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUN-hv-pO5">
+                                <rect key="frame" x="45" y="634" width="529" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="nAk-xa-to6">
+                                <rect key="frame" x="79" y="686" width="610" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="449631774.708152">
+                                    <!--2015-04-02 01:42:54 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" red="0.53223033245679008" green="0.94595713419501215" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="f23-pw-XU9"/>
                     <connections>
+                        <outlet property="date" destination="nAk-xa-to6" id="vZC-et-GYR"/>
                         <outlet property="lbCategory" destination="nEH-2W-WiA" id="9Fx-DX-3F7"/>
                         <outlet property="lbTitle" destination="HQQ-87-oWN" id="Tuq-PQ-IBj"/>
                         <outlet property="locationText" destination="X0B-DT-BjZ" id="4a1-Gm-5Fc"/>
@@ -644,6 +670,12 @@ Then the story can be continued by anyone else in the group, which adds on to th
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="line addition:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDF-aY-W9k">
+                                <rect key="frame" x="36" y="392" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="StoryImage:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUq-zM-yCA">
                                 <rect key="frame" x="320" y="110" width="93" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -662,12 +694,6 @@ Then the story can be continued by anyone else in the group, which adds on to th
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Actual Storyline" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IbH-e4-pqU">
-                                <rect key="frame" x="202" y="230" width="439" height="54"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This line by:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAV-61-Yqc">
                                 <rect key="frame" x="41" y="299" width="92" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -682,6 +708,24 @@ Then the story can be continued by anyone else in the group, which adds on to th
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Story Starter:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDV-e9-ICS">
                                 <rect key="frame" x="41" y="151" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date Starter:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jqn-1G-6H1">
+                                <rect key="frame" x="41" y="197" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0-0-0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2V-v2-LA8">
+                                <rect key="frame" x="159" y="197" width="96" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date of " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ys-Ur-FH3">
+                                <rect key="frame" x="36" y="374" width="61" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -708,12 +752,6 @@ Then the story can be continued by anyone else in the group, which adds on to th
                                     <action selector="postToFacebook:" destination="hKa-c2-2bD" eventType="touchUpInside" id="Mvj-9o-BaS"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3ia-ws-CWC">
-                                <rect key="frame" x="430" y="90" width="240" height="128"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LPp-pZ-rUx">
-                                <rect key="frame" x="430" y="299" width="240" height="128"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZb-h3-o23">
                                 <rect key="frame" x="478" y="620" width="206" height="90"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -724,6 +762,24 @@ Then the story can be continued by anyone else in the group, which adds on to th
                                     <action selector="sendATweet:" destination="hKa-c2-2bD" eventType="touchUpInside" id="qND-As-vEb"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3ia-ws-CWC">
+                                <rect key="frame" x="430" y="90" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LPp-pZ-rUx">
+                                <rect key="frame" x="430" y="299" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Actual Storyline" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IbH-e4-pqU">
+                                <rect key="frame" x="159" y="230" width="511" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0-0-0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ras-Zr-7iL">
+                                <rect key="frame" x="159" y="392" width="96" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.55440035402037746" green="0.95337751120641268" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -731,6 +787,8 @@ Then the story can be continued by anyone else in the group, which adds on to th
                     <navigationItem key="navigationItem" title="StoryLine-3" id="miU-uv-1vS"/>
                     <connections>
                         <outlet property="lbCuser" destination="2A3-R3-73f" id="23F-xH-NDo"/>
+                        <outlet property="lbdate1" destination="P2V-v2-LA8" id="nhv-8K-ZMw"/>
+                        <outlet property="lbdate2" destination="Ras-Zr-7iL" id="PEc-D3-nGe"/>
                         <outlet property="lbimg1" destination="YUq-zM-yCA" id="Rpx-fq-2hk"/>
                         <outlet property="lbimg2" destination="5oC-YF-7N0" id="kb9-kh-0Pj"/>
                         <outlet property="lbsline" destination="IbH-e4-pqU" id="TZd-7n-1wq"/>

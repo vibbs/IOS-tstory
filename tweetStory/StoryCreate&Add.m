@@ -17,6 +17,7 @@
 @property (nonatomic,retain) StoryBook * thistory;
 @property (nonatomic) NSUInteger countloc;
 @property (nonatomic) NSUInteger countnam;
+@property (nonatomic,retain) NSDate * thisdate;
 
 
 
@@ -47,7 +48,8 @@
     [self.locationManager startUpdatingLocation];
     
     
-    
+   _thisdate = [NSDate date ];
+    [_date setDate:_thisdate animated:YES];
  
     
    
@@ -123,11 +125,20 @@
     NSString* slocation =_locationText.text;
     NSString* sname = _nameText.text;
     
+    //date
+    NSDateFormatter *dateformat = [[NSDateFormatter alloc] init];
+    [dateformat setDateFormat:@"yyyy-MM-dd"];
+    NSDate * dd = _date.date;
+    NSString * sdate = [dateformat stringFromDate:dd];
+  
+    
     NSLog(@"%@", sline);
     NSLog(@"%@", stitle);
     NSLog(@"%@", scategory);
     NSLog(@"%@", slocation);
      NSLog(@"%@", sname);
+    NSLog(@"*****************thidate*********************");
+    NSLog(@"%@", sdate);
     
     
     AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -141,6 +152,9 @@
     [thisStoryLine setValue:sname forKey:@"sname"];
     [thisStoryLine setValue:sline forKey:@"sline"];
     [thisStoryLine setValue:stitle forKey:@"title"];
+  
+    //have to change this
+    [thisStoryLine setValue:sdate forKey:@"date"];
   
     //to store the media
     

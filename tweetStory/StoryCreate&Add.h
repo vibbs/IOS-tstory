@@ -41,6 +41,7 @@
 
 @property (strong, nonatomic) CLLocationManager * locationManager;
 
+@property (weak, nonatomic) IBOutlet UIDatePicker *date;
 
 
 

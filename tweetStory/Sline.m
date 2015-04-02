@@ -16,5 +16,6 @@
 @dynamic sname;
 @dynamic media;
 @dynamic title;
+@dynamic date;
 
 @end

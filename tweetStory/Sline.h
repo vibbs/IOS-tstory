@@ -17,5 +17,5 @@
 @property (nonatomic, retain) NSString * sname;
 @property (nonatomic, retain) NSData * media;
 @property (nonatomic, retain) NSString * title;
-
+@property (nonatomic, retain) NSString * date;
 @end

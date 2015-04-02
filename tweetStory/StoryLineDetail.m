@@ -124,10 +124,14 @@
     
     [_lbtitle setText:[_thisline valueForKey:@"title"]];
     [_lbuser setText:[_thisline valueForKey:@"sname"]];
-    //[_lbsline setText:[_thisline valueForKey:@"sline"]];
+    [_lbdate2 setText:[_thisline valueForKey:@"date"]];
+     
+     
     [_lbCuser setText:[_thisstory valueForKey:@"createrUser"]];
     
+    
     [_lbsline setText:[[_arr objectAtIndex:_index] valueForKey:@"sline"]];
+     [_lbdate1 setText:[[_arr objectAtIndex:0] valueForKey:@"date"]];
     
     NSLog(@"%@",[_thisline valueForKey:@"title"]);
      NSLog(@"%@",[_thisline valueForKey:@"sname"]);

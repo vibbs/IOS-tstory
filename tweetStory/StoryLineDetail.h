@@ -37,6 +37,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *lbimg2;
 
+@property (weak, nonatomic) IBOutlet UILabel *lbdate1;
+@property (weak, nonatomic) IBOutlet UILabel *lbdate2;
 
 
 - (IBAction)postToFacebook:(id)sender;

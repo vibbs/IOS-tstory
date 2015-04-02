@@ -92,6 +92,7 @@
 		CAF4D9E31AC7A946001D2F8D /* Website.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Website.m; sourceTree = "<group>"; };
 		CAFFA7D01ACCC8C6006CFFE5 /* AddStoryPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddStoryPictureViewController.h; sourceTree = "<group>"; };
 		CAFFA7D11ACCC8C6006CFFE5 /* AddStoryPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddStoryPictureViewController.m; sourceTree = "<group>"; };
+		CAFFA7D31ACCD4E0006CFFE5 /* tweetStory.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = tweetStory.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +140,7 @@
 		CA880F461AC367EA00ADF404 /* tweetStory */ = {
 			isa = PBXGroup;
 			children = (
+				CAFFA7D31ACCD4E0006CFFE5 /* tweetStory.entitlements */,
 				CA880F721AC3689900ADF404 /* View */,
 				CA880F711AC3689000ADF404 /* Controller */,
 				CA880F701AC3688000ADF404 /* Model */,
@@ -313,6 +315,11 @@
 					CA880F431AC367EA00ADF404 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = R9L5AZ23WX;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
 					};
 					CA880F5F1AC367EA00ADF404 = {
 						CreatedOnToolsVersion = 6.1.1;
