@@ -27,7 +27,18 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *set;
 
+@property (weak, nonatomic) IBOutlet UIImageView *set2;
+
+
 @property (nonatomic, retain) UIImage * media;
+@property (nonatomic, retain) UIImage * media2;
+
+@property (weak, nonatomic) IBOutlet UILabel *lbimg1;
+
+@property (weak, nonatomic) IBOutlet UILabel *lbimg2;
+
+
+
 - (IBAction)postToFacebook:(id)sender;
 
 - (IBAction)sendATweet:(id)sender;

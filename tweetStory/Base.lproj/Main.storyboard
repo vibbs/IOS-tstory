@@ -639,7 +639,19 @@ Then the story can be continued by anyone else in the group, which adds on to th
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="StoryLine:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ug1-Vz-Tdh">
-                                <rect key="frame" x="41" y="275" width="78" height="21"/>
+                                <rect key="frame" x="41" y="230" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="StoryImage:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUq-zM-yCA">
+                                <rect key="frame" x="320" y="110" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="StoryLineImage:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5oC-YF-7N0">
+                                <rect key="frame" x="304" y="334" width="125" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -651,43 +663,44 @@ Then the story can be continued by anyone else in the group, which adds on to th
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Actual Storyline" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IbH-e4-pqU">
-                                <rect key="frame" x="159" y="275" width="439" height="54"/>
+                                <rect key="frame" x="202" y="230" width="439" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAV-61-Yqc">
-                                <rect key="frame" x="41" y="369" width="51" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This line by:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAV-61-Yqc">
+                                <rect key="frame" x="41" y="299" width="92" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Share:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guI-uV-JId">
-                                <rect key="frame" x="41" y="440" width="50" height="21"/>
+                                <rect key="frame" x="56" y="507" width="50" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Story Starter:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDV-e9-ICS">
-                                <rect key="frame" x="41" y="332" width="103" height="21"/>
+                                <rect key="frame" x="41" y="151" width="103" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UserName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zo9-ST-jXd">
-                                <rect key="frame" x="159" y="369" width="82" height="21"/>
+                                <rect key="frame" x="159" y="299" width="125" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MainUserName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2A3-R3-73f">
-                                <rect key="frame" x="159" y="332" width="119" height="21"/>
+                                <rect key="frame" x="159" y="151" width="119" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMH-wF-FTP">
-                                <rect key="frame" x="159" y="436" width="64" height="30"/>
+                                <rect key="frame" x="61" y="618" width="155" height="92"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="facebook">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -695,8 +708,15 @@ Then the story can be continued by anyone else in the group, which adds on to th
                                     <action selector="postToFacebook:" destination="hKa-c2-2bD" eventType="touchUpInside" id="Mvj-9o-BaS"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3ia-ws-CWC">
+                                <rect key="frame" x="430" y="90" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LPp-pZ-rUx">
+                                <rect key="frame" x="430" y="299" width="240" height="128"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZb-h3-o23">
-                                <rect key="frame" x="305" y="436" width="43" height="30"/>
+                                <rect key="frame" x="478" y="620" width="206" height="90"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="twitter">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -704,9 +724,6 @@ Then the story can be continued by anyone else in the group, which adds on to th
                                     <action selector="sendATweet:" destination="hKa-c2-2bD" eventType="touchUpInside" id="qND-As-vEb"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3ia-ws-CWC">
-                                <rect key="frame" x="33" y="139" width="240" height="128"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.55440035402037746" green="0.95337751120641268" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -714,10 +731,13 @@ Then the story can be continued by anyone else in the group, which adds on to th
                     <navigationItem key="navigationItem" title="StoryLine-3" id="miU-uv-1vS"/>
                     <connections>
                         <outlet property="lbCuser" destination="2A3-R3-73f" id="23F-xH-NDo"/>
+                        <outlet property="lbimg1" destination="YUq-zM-yCA" id="Rpx-fq-2hk"/>
+                        <outlet property="lbimg2" destination="5oC-YF-7N0" id="kb9-kh-0Pj"/>
                         <outlet property="lbsline" destination="IbH-e4-pqU" id="TZd-7n-1wq"/>
                         <outlet property="lbtitle" destination="y7g-xG-u3t" id="VD9-zc-ctv"/>
                         <outlet property="lbuser" destination="Zo9-ST-jXd" id="YwG-OQ-DYH"/>
                         <outlet property="set" destination="3ia-ws-CWC" id="kFl-13-KkI"/>
+                        <outlet property="set2" destination="LPp-pZ-rUx" id="ALa-z2-8Jl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4bm-av-hAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>

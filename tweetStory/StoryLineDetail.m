@@ -26,12 +26,14 @@
     // Do any additional setup after loading the view.
     self.title = _segValue;
     
-    
+    [_lbimg1 setText:@""];
+    [_lbimg2 setText:@""];
     
     [self loaddata];
     //[self getCuser];
 
     [self refreshView];
+    
 }
 
 
@@ -83,8 +85,10 @@
     _media =[UIImage imageWithData:[_imgobject valueForKey:@"media"]];
     
     if (_media==NULL) {
+        [_lbimg1 setText:@""];
         return;
     }else{
+        [_lbimg1 setText:@"StoryImage:"];
     [_media drawInRect:rect];
     UIImage *picture1 = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
@@ -92,6 +96,26 @@
     NSData *imageData = UIImagePNGRepresentation(picture1);
     UIImage *img=[UIImage imageWithData:imageData];
     [_set setImage:img];
+    }
+}
+
+-(void) refresh2{
+    CGRect rect = CGRectMake(0,0,75,75);
+    UIGraphicsBeginImageContext( rect.size );
+    _media2 =[UIImage imageWithData:[[_arr objectAtIndex:_index] valueForKey:@"media"]];
+    
+    if (_media2==NULL) {
+        [_lbimg2 setText:@""];
+        return;
+    }else{
+        [_lbimg2 setText:@"StoryLineImage:"];
+        [_media2 drawInRect:rect];
+        UIImage *picture1 = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        NSData *imageData = UIImagePNGRepresentation(picture1);
+        UIImage *img=[UIImage imageWithData:imageData];
+        [_set2 setImage:img];
     }
 }
 
@@ -111,6 +135,7 @@
      NSLog(@"%@", [_thisstory valueForKey:@"createrUser"]);
     
     [self refresh];
+    [self refresh2];
     
 }
 
