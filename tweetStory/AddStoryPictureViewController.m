@@ -1,26 +1,22 @@
 //
-//  StoryCreate&Add.h
+//  AddStoryPictureViewController.m
 //  tweetStory
 //
-//  Created by Doddihal, Vaibhav A on 3/25/15.
+//  Created by Doddihal, Vaibhav A on 4/1/15.
 //  Copyright (c) 2015 edu.newhaven.ios.doddihal. All rights reserved.
 //
 
-#import "PicturesViewController.h"
+#import "AddStoryPictureViewController.h"
 
-@interface PicturesViewController ()
-
-
+@interface AddStoryPictureViewController ()
 
 @end
 
-@implementation PicturesViewController
+@implementation AddStoryPictureViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-     NSLog(@"Entered picture view ");
-    NSLog(@"%@",_send);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,27 +24,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
- 
- 
- if ([[segue identifier] isEqual:@"startstory"]) {
- StoryCreate_Add *vc = segue.destinationViewController;
- UIImage *p = _send;
- 
- 
- NSLog(@"This is the selected image sent to start story");
-  NSLog(@"%@",_send);
- vc.media = p;
- }
 
-}
-*/
 
 - (IBAction)takeAPicture:(id)sender {
     
@@ -98,15 +75,14 @@
 }
 
 
+/*
+#pragma mark - Navigation
 
-
-
-
-
-
-
-
-
-
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

@@ -154,11 +154,17 @@
     
     NSManagedObject *thisStoryLine = [[NSManagedObject alloc] initWithEntity:storyLineDescription insertIntoManagedObjectContext:app.managedObjectContext];
     
-    [thisStoryLine setValue:_media forKey:@"media"];
+    
     [thisStoryLine setValue:slocation forKey:@"sloc"];
     [thisStoryLine setValue:sname forKey:@"sname"];
     [thisStoryLine setValue:sline forKey:@"sline"];
     [thisStoryLine setValue:stitle forKey:@"title"];
+    
+    //to store the media
+    
+    NSData * image = UIImageJPEGRepresentation(_media, 0.0);
+    
+    [thisStoryLine setValue:image forKey:@"media"];
     
     NSError *eee =nil;
     if(![thisStoryLine.managedObjectContext save:&eee]){
@@ -354,13 +360,25 @@
                                                   object:nil];
 }
 
+-(void) refreshimg{
+    CGRect rect = CGRectMake(0,0,75,75);
+    UIGraphicsBeginImageContext( rect.size );
+    [_media drawInRect:rect];
+    UIImage *picture1 = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    NSData *imageData = UIImagePNGRepresentation(picture1);
+    UIImage *img=[UIImage imageWithData:imageData];
+    [_set setImage:img];
+    
+}
 
 
 -(IBAction)unwindtoaddstory:(UIStoryboardSegue *)seg {
     PicturesViewController  *vc = seg.sourceViewController;
     
     _media = vc.send;
-    
+    [self refreshimg];
     
 }
 

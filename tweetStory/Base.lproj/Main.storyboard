@@ -181,20 +181,10 @@
                                     <segue destination="v3U-Ck-4EN" kind="show" identifier="NewStory" id="xMv-Ku-CCp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JvH-g7-1A9">
-                                <rect key="frame" x="287" y="358" width="195" height="60"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="View Other Stories">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="sfe-xW-MsN" kind="show" id="fXR-Tm-2QY"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bL-Xp-2Af">
                                 <rect key="frame" x="235" y="465" width="276" height="77"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="World Story Tweets">
+                                <state key="normal" title="World  #tweetStory">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -220,6 +210,16 @@ Then the story can be continued by anyone else in the group, which adds on to th
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JvH-g7-1A9">
+                                <rect key="frame" x="249" y="357" width="270" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="View Stories by Categories">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="sfe-xW-MsN" kind="show" id="fXR-Tm-2QY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.51626095539002859" green="0.96309071726666096" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -466,6 +466,9 @@ Then the story can be continued by anyone else in the group, which adds on to th
                                 <state key="normal" title="Camera">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="RSr-AE-gku" kind="show" identifier="addstory" id="EiH-oZ-V8o"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Use Location?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TqA-ZC-KtO">
                                 <rect key="frame" x="45" y="443" width="111" height="21"/>
@@ -841,16 +844,16 @@ Then the story can be continued by anyone else in the group, which adds on to th
         <!--Pictures-->
         <scene sceneID="xR6-Tz-HlM">
             <objects>
-                <viewController title="Pictures" id="RSr-AE-gku" customClass="Pictures2ViewController" sceneMemberID="viewController">
+                <viewController title="Pictures" id="RSr-AE-gku" customClass="AddStoryPictureViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xtC-y3-Bx0"/>
                         <viewControllerLayoutGuide type="bottom" id="DAC-ro-p5R"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="d6h-yE-GVr">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tq0-lI-xGz">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tq0-lI-xGz">
                                 <rect key="frame" x="16" y="974" width="97" height="30"/>
                                 <state key="normal" title="Take a Picture">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -859,10 +862,7 @@ Then the story can be continued by anyone else in the group, which adds on to th
                                     <action selector="takeAPicture:" destination="RSr-AE-gku" eventType="touchUpInside" id="iKZ-yq-PIO"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m9A-aM-2ak">
-                                <rect key="frame" x="0.0" y="64" width="600" height="875"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsN-3W-87E">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsN-3W-87E">
                                 <rect key="frame" x="654" y="974" width="98" height="30"/>
                                 <state key="normal" title="View a Picture">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -871,27 +871,20 @@ Then the story can be continued by anyone else in the group, which adds on to th
                                     <action selector="viewPictureLibrary:" destination="RSr-AE-gku" eventType="touchUpInside" id="Lmm-ty-o4n"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brG-XW-bIY">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brG-XW-bIY">
                                 <rect key="frame" x="361" y="974" width="30" height="30"/>
                                 <state key="normal" title="OK">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="d0o-Pb-4Xv" kind="unwind" unwindAction="unwindtoaddstory:" id="DhT-66-fu8"/>
+                                    <segue destination="d0o-Pb-4Xv" kind="unwind" unwindAction="unwindtoaddstory:" id="kNp-Cx-WIe"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m9A-aM-2ak">
+                                <rect key="frame" x="0.0" y="78" width="768" height="836"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="m9A-aM-2ak" secondAttribute="trailing" id="Kgn-3G-oGX"/>
-                            <constraint firstItem="brG-XW-bIY" firstAttribute="top" secondItem="m9A-aM-2ak" secondAttribute="bottom" constant="35" id="QkS-Je-FuU"/>
-                            <constraint firstAttribute="trailing" secondItem="bsN-3W-87E" secondAttribute="trailing" constant="7" id="e2S-fk-HgR"/>
-                            <constraint firstItem="Tq0-lI-xGz" firstAttribute="leading" secondItem="d6h-yE-GVr" secondAttribute="leading" constant="16" id="jIm-Xo-htp"/>
-                            <constraint firstItem="m9A-aM-2ak" firstAttribute="top" secondItem="xtC-y3-Bx0" secondAttribute="bottom" constant="18" id="kcF-Bh-cSS"/>
-                            <constraint firstItem="bsN-3W-87E" firstAttribute="top" secondItem="m9A-aM-2ak" secondAttribute="bottom" constant="28" id="mb2-A6-tIl"/>
-                            <constraint firstItem="Tq0-lI-xGz" firstAttribute="top" secondItem="m9A-aM-2ak" secondAttribute="bottom" constant="28" id="xfn-5P-Fow"/>
-                            <constraint firstItem="m9A-aM-2ak" firstAttribute="leading" secondItem="d6h-yE-GVr" secondAttribute="leading" id="ydz-On-RZK"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Camera Control" id="2ji-1Q-nt4"/>
                     <connections>
@@ -901,7 +894,7 @@ Then the story can be continued by anyone else in the group, which adds on to th
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ghk-fy-dnb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="d0o-Pb-4Xv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1256" y="-1078"/>
+            <point key="canvasLocation" x="1261" y="-898"/>
         </scene>
     </scenes>
 </document>

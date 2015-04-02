@@ -32,6 +32,7 @@
 		CAF4D9DB1AC773C5001D2F8D /* StoryBook.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF4D9DA1AC773C5001D2F8D /* StoryBook.m */; };
 		CAF4D9E11AC77966001D2F8D /* Sline.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF4D9E01AC77966001D2F8D /* Sline.m */; };
 		CAF4D9E41AC7A946001D2F8D /* Website.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF4D9E31AC7A946001D2F8D /* Website.m */; };
+		CAFFA7D21ACCC8C6006CFFE5 /* AddStoryPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAFFA7D11ACCC8C6006CFFE5 /* AddStoryPictureViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,8 @@
 		CAF4D9E01AC77966001D2F8D /* Sline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sline.m; sourceTree = "<group>"; };
 		CAF4D9E21AC7A946001D2F8D /* Website.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Website.h; sourceTree = "<group>"; };
 		CAF4D9E31AC7A946001D2F8D /* Website.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Website.m; sourceTree = "<group>"; };
+		CAFFA7D01ACCC8C6006CFFE5 /* AddStoryPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddStoryPictureViewController.h; sourceTree = "<group>"; };
+		CAFFA7D11ACCC8C6006CFFE5 /* AddStoryPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddStoryPictureViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +221,8 @@
 		CAA327D51AC39D8000E71815 /* AppController */ = {
 			isa = PBXGroup;
 			children = (
+				CAFFA7D01ACCC8C6006CFFE5 /* AddStoryPictureViewController.h */,
+				CAFFA7D11ACCC8C6006CFFE5 /* AddStoryPictureViewController.m */,
 				CAA328051AC3E6DE00E71815 /* PicturesViewController.h */,
 				CAA328061AC3E6DE00E71815 /* PicturesViewController.m */,
 				CAA327E61AC39F9F00E71815 /* View */,
@@ -375,6 +380,7 @@
 				CA880F4A1AC367EA00ADF404 /* main.m in Sources */,
 				CAA327DE1AC39F0000E71815 /* ListStoryByCategoryType.m in Sources */,
 				CAF4D9E11AC77966001D2F8D /* Sline.m in Sources */,
+				CAFFA7D21ACCC8C6006CFFE5 /* AddStoryPictureViewController.m in Sources */,
 				CAA327D81AC39E5300E71815 /* ManageStory.m in Sources */,
 				CAA328071AC3E6DE00E71815 /* PicturesViewController.m in Sources */,
 			);
